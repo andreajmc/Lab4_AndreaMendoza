@@ -158,6 +158,7 @@ void normalAttack(int*** board) {
     cout<<endl;
     if (board[x][y][z] == 1) {
         cout<<"Submarino en ("<<x<<", "<<y<<", "<<z<<") destruído."<<endl;
+        board[x][y][z] == 0;
     } else {
         cout<<"Nada que destruir."<<endl;
     }
@@ -187,6 +188,7 @@ void waveAttack(int*** board) {
             for (int y = 0; y < 12; y++) {
                 if (board[x][y][atck] == 1) {
                     cout<<"Submarino en ("<<x<<", "<<y<<", "<<atck<<") destruído."<<endl; 
+                board[x][y][atck] == 0;
                 } else {
                     cout<<"Nada que destruir."<<endl;
                 }
@@ -204,6 +206,7 @@ void waveAttack(int*** board) {
             for (int z = 0; z < 12; z++) {
                  if (board[atck][y][z] == 1) {
                      cout<<"Submarino en ("<<atck<<", "<<y<<", "<<z<<") destruído."<<endl;
+                 board[atck][y][z] == 0;
                  } else {
                      cout<<"Nada que destruir."<<endl;
                  }
@@ -220,6 +223,7 @@ void waveAttack(int*** board) {
             for (int z = 0; z < 12; z++) {
                  if (board[x][atck][z] == 1) {
                      cout<<"Submarino en ("<<x<<", "<<atck<<", "<<z<<") destruído."<<endl;
+                 board[x][atck][z] == 0;    
                  } else {
                      cout<<"Nada que destruir."<<endl;
                  }
